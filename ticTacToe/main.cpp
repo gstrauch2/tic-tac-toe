@@ -112,13 +112,16 @@ bool testDiagRight(char chrAry[intY][intX], char chr){
 } //
 
 
+// I fixed this
 bool testDiagLeft(char chrAry[intY][intX], char chr){
+    
+    int i = 2;
+    for (int j = 0; j < 3; ++j) {
 
-    for (int j = 3; j > 0; --j) {
-
-        if(chrAry[j][j] != chr){
+        if(chrAry[j][i] != chr){
             return false;
         }
+        --i;
     }
     cout << "The winner is " << chr;
     cerr << " test diag left";
